@@ -3,7 +3,7 @@ package abgabe1_2;
 
 import de.medieninf.ads.ADSTool;
 
-public class Aufgabe2 {
+public class abgabeAufgabe2 {
 
     public static void main(String[] args) {
     	char[][] summand1;
