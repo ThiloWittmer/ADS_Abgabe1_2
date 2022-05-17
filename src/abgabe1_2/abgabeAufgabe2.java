@@ -15,8 +15,8 @@ public class abgabeAufgabe2 {
         	addNumbersInFile(ADSTool.readStringArray("langeZahlen.dat"), summand1, summand2);
         }
         else {
-        	summand1 = new char[args.length/2][];
-        	summand2 = new char[args.length/2][];
+        	summand1 = new char[(ADSTool.readStringArray(args[0]).length)/2][];
+        	summand2 = new char[(ADSTool.readStringArray(args[0]).length)/2][];
         	addNumbersInFile(ADSTool.readStringArray(args[0]), summand1, summand2);
         }
         
