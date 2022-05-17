@@ -31,7 +31,6 @@ public class Aufgabe2 {
         }
     }
     
-    //test
     /*** 
      * stores content of summand1 in number2 and from summand2 in number1
      * @param summand1
