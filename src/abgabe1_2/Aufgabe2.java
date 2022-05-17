@@ -40,7 +40,6 @@ public class Aufgabe2 {
      */
     static void swap(char[] summand1, char[] summand2, char[] number1, char[] number2){
     	char[] temp = new char[summand1.length];
-    	
     	System.arraycopy(summand1, 0, temp, 0, summand1.length);
     	System.arraycopy(summand2, 0, number1, 0, summand2.length);
     	System.arraycopy(temp, 0, number2, 0, temp.length);
@@ -118,7 +117,7 @@ public class Aufgabe2 {
     		results[i] = "";
     	}
     	
-    	// runs through digits of second number to multiply with digits of first number#
+    	// runs through digits of second number to multiply with digits of first number
     	//storing the results in a String array and then adding them to a final result
     	for (int i=0; i < number2.length; i++) {
     		for (int n=0; n < number1.length; n++) {
