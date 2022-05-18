@@ -18,15 +18,15 @@ public class Aufgabe1 {
 			System.arraycopy(ADSTool.readIntArray(args[0]), 0, datei, 0, datei.length);
 		}
 		
-		//erzeugen eines Speicher-arrays f�r Zahlen und ihre H�ufigkeit
-		//arr[0] f�r die Zahlen und arr[1] die entsprechenden H�ufigkeiten
+		//erzeugen eines Speicher-arrays fuer Zahlen und ihre Haeufigkeit
+		//arr[0] fuer die Zahlen und arr[1] die entsprechenden Haeufigkeiten
 		int length = datei.length;
 		int [][] arr = new int[2][length];
 		
 		sort(datei, 0, length-1);
 		
-		//wenn die aktuelle Zahl mit der darvor �bereinstimmt: zaehler++
-		//ansonsten: wird die Zaahl darvor mit ihrer H�ufigkeit abgespeichert
+		//wenn die aktuelle Zahl mit der darvor uebereinstimmt: zaehler++
+		//ansonsten: wird die Zaahl darvor mit ihrer Haeufigkeit abgespeichert
 		for(int i=0; i < length; i++) {
 			if (i!=0 && datei[i] != datei[i-1]) {
 				arr[0][index] = datei[i-1];
@@ -36,7 +36,7 @@ public class Aufgabe1 {
 			} else if(i!=0) zaehler++;
 		}
 		
-		//Letzte Zahl und ihre H�ufigkeit speichern
+		//Letzte Zahl und ihre Haeufigkeit speichern
 		arr[0][index] = datei[length-1];
 		arr[1][index] = zaehler;
 		
@@ -46,7 +46,7 @@ public class Aufgabe1 {
 		for(int i=0; i<10; i++) {
 			for(int j=0; j < length; j++) {
 				if(datei[length-1-i] == arr[1][j] && arr[0][j] !=0) {
-					System.out.println(arr[0][j] + "\tH�ufigkeit: " + arr[1][j]);
+					System.out.println(arr[0][j] + "\tHaeufigkeit: " + arr[1][j]);
 					arr[0][j] = 0;
 					break;
 				}
@@ -54,11 +54,11 @@ public class Aufgabe1 {
 		}
 	}
 	
-	//sortiert alle zahlen die kleiner als arr[high] sind links von arr[i+1]; alle gr��eren rechts davon
-	//setzt dann den pivot bzw. arr[high] and arr[i+1] und gibt dessen index zur�ck
+	//sortiert alle zahlen die kleiner als arr[high] sind links von arr[i+1]; alle groesseren rechts davon
+	//setzt dann den pivot bzw. arr[high] and arr[i+1] und gibt dessen index zurueck
 	/***
-	 * sortiert alle zahlen die kleiner als arr[high] sind links von arr[i+1]; alle gr��eren rechts davon
-	 * setzt dann den pivot bzw. arr[high] and arr[i+1] und gibt dessen index zur�ck
+	 * sortiert alle zahlen die kleiner als arr[high] sind links von arr[i+1]; alle groesseren rechts davon
+	 * setzt dann den pivot bzw. arr[high] and arr[i+1] und gibt dessen index zurueck
 	 * @param arr
 	 * @param low
 	 * @param high
@@ -88,19 +88,18 @@ public class Aufgabe1 {
     }
 	
 	/***
-	 * Quicksort f�r ein int arr 
+	 * Quicksort fuer ein int arr 
 	 * @param arr
 	 * @param low ist der niederigste array-index
-	 * @param high ist der h�chste array-Index; wird als pivot verwendet
+	 * @param high ist der hoechste array-Index; wird als pivot verwendet
 	 */
 	static void sort(int arr[], int low, int high) {
         if (low < high) {
         	
-            // pi is partitioning index, arr[pi] is now at right place
+            // pi ist  der partitions index, arr[pi] ist jetzt am richtigen Platz
             int pi = partition(arr, low, high);
   
-            // Recursively sort elements before
-            // partition and after partition
+            // Rekursiv die Elemente von vorher suchen
             sort(arr, low, pi-1);
             sort(arr, pi+1, high);
         }
